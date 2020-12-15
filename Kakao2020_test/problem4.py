@@ -43,7 +43,8 @@ def solution(words, queries):
                 if not test[i] == query[i]:
                     print(_,query,'incorrect')
                 else:
-                    
+                    print()
+
 
 
 
