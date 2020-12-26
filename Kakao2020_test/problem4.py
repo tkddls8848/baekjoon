@@ -4,6 +4,7 @@
 3-1.나머지 검색문이 접미어일떄 뒤어서부터 한글자씩 탐색문에서 제외해나간다.while
 3-2.나머지 검색문을 첫글자부터 앞에서부터 한글자씩 탐색문에서 제외해나간다.while
 '''
+
 from collections import deque
 words = ["frodo", "front", "frost", "frozen", "frame", "kakao"]
 queries = ["fro??", "????o", "fr???", "fro???", "pro?"]
