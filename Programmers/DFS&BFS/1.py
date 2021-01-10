@@ -3,7 +3,6 @@ target = 3
 answer = 0
 
 def dfs(number, depth):
-    number
     global answer
 #    print(number, depth)
     if depth == len(numbers):
