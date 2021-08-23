@@ -6,15 +6,28 @@ query = ["java and backend and junior and pizza 100","python and frontend and se
 
 def solution(info, query):
     answer = []
-    info_dic = {}
-    info_dic_num = {}
-    for _ in info:
-        l = _.split(" ")
-        tmp = 1
-        for _ in l[:-1]:
-            info_dic[_] = tmp
-            tmp += 1
-        l[-1:]
+    i_dic = {}
+    i_score_dic = {}
+    q_dic = {}
+    q_score_dic = {}
+    for i in range(len(info)):
+        info_dic = {}
+        name = ["lang", "part", "career", "fav"]
+        li= list(map(str, info[i].split(" ")))[0:-1]
+        li_score = list(map(str, info[i].split(" ")))[-1]
+        for l in range(len(li)):
+            info_dic[name[l]] = li[l]
+        i_dic[i] = info_dic
+    print(i_dic)
+    for q in range(len(query)):
+        query_dic = {}
+        name = ["lang", "part", "career", "fav"]
+        li = list(map(str, query[q].split(" and ")))
+        for l in range(len(li)):
+            query_dic[name[l]] = li[l]
+        q_dic[q] = query_dic
+    print(q_dic)
+
     return answer
 
 solution(info, query)
