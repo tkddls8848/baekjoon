@@ -1,13 +1,16 @@
-numbers	= [1, 1, 1, 1, 1]
-target = 3
-answer = 0
+##numbers	= [1, 1, 1, 1, 1]
+##target = 3
+numbers	= [4, 1, 2, 1]
+target = 4
 
 def solution(numbers, target):
-    if not numbers and target == 0 :
-        return 1
-    elif not numbers:
-        return 0
-    else:
-        return solution(numbers[1:], target-numbers[0]) + solution(numbers[1:], target+numbers[0])
+    if numbers == []:
+        if target == 0:
+            return 1
+        else:
+            return 0
+    answer = solution(numbers[1:], target+numbers[0])+solution(numbers[1:], target-numbers[0])
+    return answer
 
-solution(numbers, target)
+
+print(solution(numbers, target))
